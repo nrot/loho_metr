@@ -284,18 +284,18 @@
                 if(x + step >= parseInt(can.width)){
                     x = parseInt(can.width) - step;
                 }
-                console.log('x = ' + x);
-                console.log('step = ' + step);
-                console.log('color = ' + colors[i]);
+                // console.log('x = ' + x);
+                // console.log('step = ' + step);
+                // console.log('color = ' + colors[i]);
                 ctx.fillStyle = colors[i];
                 ctx.fillRect(x, 0, step, parseInt(can.height));
-                console.log("height = "+parseInt(can.height));
+                // console.log("height = "+parseInt(can.height));
                 // ctx.fill();
             }
         }
         var amount_point = 0;
         function update_value() {
-            console.log(amount_point);
+            // console.log(amount_point);
             if(amount_point >= 0 && amount_point <= 40){
                 metr.innerHTML = "Пизда рулю..."
                 metr.style = "color:red;background-color:black;";
@@ -337,7 +337,7 @@
                 metr.innerHTML = "Ты там не ахуел случаем?"
                 metr.style = "color:red;background-color:white;font-size:5rem;";
             }
-            console.log(metr.innerHTML);
+            // console.log(metr.innerHTML);
         }
         function main(){
             parts.forEach(function(item, index, arr){
