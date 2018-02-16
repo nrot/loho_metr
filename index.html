@@ -96,6 +96,7 @@
             z-index: 101;
             top: 95%;
             width: 50%;
+            height: auto;
             left: 25%;
         }
     </style>
@@ -335,7 +336,8 @@
             } else {
                 amount_point = 0;
                 metr.innerHTML = "Ты там не ахуел случаем?"
-                metr.style = "color:red;background-color:white;font-size:5rem;";
+                metr.style = "color:red;background-color:rgba(0,0,0,0);font-size:5rem;";
+                metr.parentElement.style = 'top:25%;background-color:rgba(0,0,0,0)';
             }
             // console.log(metr.innerHTML);
         }
