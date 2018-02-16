@@ -315,15 +315,33 @@
                     label_1.appendChild(input);
                     label_1.appendChild(label_2);
                     label_2.innerHTML += "+" + element[1] + " очков";
+                    label_2.className = 'input_name';
                 })
             })
+            labels = document.getElementsByClassName('input_name');
+            // console.log(labels);
+            for (var i = 0; i < labels.length; i++) {
+                element = labels[i];
+                // if(element.id == 'age')
+                //     continue;
+                element.addEventListener('click', function(event){
+                    // console.log(this);
+                    one_input = this.parentElement.getElementsByTagName('input')[0];
+                    one_input.checked = !one_input.checked;
+                    if(one_input.checked){
+                        amount_point += parseInt(one_input.value);
+                    } else {
+                        amount_point -= parseInt(one_input.value);
+                    }
+                    update_value();
+                }, false);
+            }
             inputs = document.getElementsByTagName('input');
-            // console.log(inputs);
             for (var i = 0; i < inputs.length; i++) {
                 element = inputs[i];
                 if(element.id == 'age')
                     continue;
-                element.addEventListener('click',function(event){
+                element.addEventListener('click', function(event){
                     // console.log(this);
                     if(this.checked){
                         amount_point += parseInt(this.value);
